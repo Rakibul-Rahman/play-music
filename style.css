@@ -1,0 +1,237 @@
+/* - - - - - google font - - - - - */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* - - - - -  variable  - - - - -  */
+
+:root{
+
+    /* = = = = = glass-effect=  = = = = */
+
+    --glassmorphism-effect-color-1: linear-gradient(90.41deg, rgba(255, 255, 255, 0.07) 0%, rgba(217, 217, 217, 0.07) 100%);
+
+    --glassmorphism-effecr-color-2: linear-gradient(176.45deg, rgba(217, 217, 217, 0.07) 0%, rgba(217, 217, 217, 0.07) 100%);
+
+    --glassmorphism-effect-color-3: linear-gradient(90.22deg, #020019 0%, 
+    rgba(133, 69,254, 0.6) 100%);
+
+    /* = = = = = glass-effect = = = = = */
+
+    /* = = = = = box-shadow = = = = = */
+
+    --box-shadow-1: 0px 4px 24px -1px;
+    --box-shadow-2: drop-shadow(0px 4px 30px rgba(59, 31, 124, 0.25));
+    --box-shadow-3: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --box-shadow-4:
+
+    /* = = = = = box-shadow = = = = = */
+
+    /* = = = = = backdrop-filter = = = = = */
+
+    --backdrop-filter-1: blur(20px);
+    --backdrop-filter-2: blur(153px);
+    /* --backdrop-filter-3: blur(20px);
+    --backdrop-filter-4: blur(20px); */
+
+    /* = = = = = backdrop-filter = = = = = */
+
+    /* = = = = = border-radius = = = = = */
+
+    --border-radius-1: 0.938rem;
+    --border-radius-2: 0.25rem;
+    --border-radius-3: 0.938rem;
+
+    /* = = = = = border-radius = = = = = */
+
+    /* = = = = = border = = = = = */
+
+    --border-1: 1px solid rgba(255, 255, 255, 0.2);
+    --border-2: 3px solid rgba(130, 130, 130, 0.2);
+
+    /* = = = = = border = = = = = */
+
+    /* = = = = = font-size = = = = = */
+
+    --font-size-default: 1rem;
+    --font-size-big-biggest: 2rem;
+    --font-size-bigger: 1.125rem;
+    --font-size-big: 1.25rem;
+    --font-size-small: 0.75rem;
+    --font-size-smallest: 0.5rem;
+
+    /* = = = = = font-size = = = = = */
+
+    /* = = = = = font-weight = = = = = */
+
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 900;
+
+    /* = = = = = font-weight = = = = = */
+
+    /* = = = = = font-family = = = = = */
+
+    --poppins: 'Poppins', sans-serif:
+
+    /* = = = = = font-family = = = = = */
+
+    /* = = = = = transition = = = = = */
+
+    --transition-1: all 0.5s ease;
+    --transition-2: all 0.4s ease;
+    --transition-3: all 0.3s ease;
+    --transition-4: all 0.2s ease;
+    --transition-5: all 0.1s ease; 
+
+    /* = = = = = transition = = = = = */
+
+    /* = = = = = color = = = = = */
+
+    --color-1: #fff;
+    --color-2: hsl( 255, 14, 64 );
+    --color-3: rgba(255, 255, 255, 0.5);
+
+    /* = = = = = color = = = = = */
+}
+
+/* - - - - -  variable  - - - - -  */
+
+/* - - - - - - resets css class - - - - - - */
+
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--poppins);
+    color: var(--colo-1);
+    background-image: url(./asstes/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,h2,h3,h4{
+    color: var(--color-1);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img,
+svg{
+    max-width: 100%;
+    height: auto;
+}
+
+/* - - - - - - resets - - - - - - */
+
+/* - - - - - - s-bar - - - - - - */
+.s-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 100vh;
+    background: var(--glassmorphism-effecr-color-2);
+    box-shadow: var(--box-shadow-2);
+    padding: 0.5rem 1.75rem 1.75rem;
+    transition: var(--transition-3);
+}
+
+.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-brand{
+    display: grid;
+    grid-template-columns: 4rem 6rem;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-bottom: 2rem;
+}
+
+.nav-brand .line{
+    width: 13rem;
+    height: 1px;
+    background-color: var(--color-3);
+}
+
+.nav-brand .nav-toggle{
+    font-size: 1.25rem;
+    color: var(--color-1);
+    padding: .65rem;
+    cursor: pointer;
+}
+
+.nav-brand .logo{
+    width: 100%;
+}
+
+.nav-list .nav-link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: var(--color-3);
+    font-size: var(--font-size-default);
+    transition: var(--transition-3);
+}
+
+.nav-list .nav-link .nav-name{
+    font-family: var(--poppins);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav-list .nav-link:hover{
+    color: var(--color-1);
+}
+
+.nav-list .nav-link.active{
+    color: var(--color-1);
+}
+
+.nav-policy .nav-link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: .75rem;
+    column-gap: .75rem;
+    color: var(--color-3);
+}
+
+.nav-policy .nav-link .nav-name{
+    font-size: var(--font-size-default);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--poppins);
+}
+
+.nav-policy .nav-link:hover{
+    color: var(--color-3);
+}
+
+/* = = = = nav-open = = = = */
+.open{
+    width: calc(6rem + 9.938rem);
+}
+/* = = = = nav-open = = = = */
+
+/* - - - - - - s-bar - - - - - - */
